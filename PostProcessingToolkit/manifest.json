@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/beat-saber-modding-group/BSIPA-MetadataFileSchema/master/Schema.json",
+  "author": "Toni Macaroni",
+  "description": "Change the look of Beat Saber",
+  "gameVersion": "1.11.1",
+  "id": "PostProcessingToolkit",
+  "name": "PostProcessingToolkit",
+  "version": "0.1.0",
+  "dependsOn": {
+  },
+  "links": {
+    "project-source": "https://github.com/ToniMacaroni/PostProcessingToolkit"
+  },
+  "features": [
+  ]
+}

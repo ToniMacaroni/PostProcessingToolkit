@@ -1,0 +1,34 @@
+﻿<div xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xsi:schemaLocation='https://monkeymanboy.github.io/BSML-Docs/ https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+  <text anchor-min-y='0' anchor-max-y='0' anchor-min-x='0.5' anchor-max-x='0.5' anchor-pos-y='2.5' text='Toni Macaroni#8970' align='Center' font-size='3.5' font-color='#bbb'/>
+    <scrollable-settings-container id='scrollable' anchor-min-x='0.5' anchor-max-x='0.5' anchor-min-y='0' anchor-max-y='1' anchor-pos-x='0' anchor-pos-y='3' size-delta-x='90' size-delta-y='-4'>
+      <checkbox text='Enabled' value='Enabled' apply-on-change='true'/>
+      <slider-setting text='Saturation' value='Saturation' min='-1' max='1' apply-on-change='true'/>
+      <slider-setting text='Vignette' value='Vignette' min='0' max='1' apply-on-change='true'/>
+      <horizontal  vertical-fit='PreferredSize'>
+        <text text='Color shift' font-size='5'></text>
+        <raw-image id='color-shift-preview' size-delta-x='10'></raw-image>
+        <button text='Change' on-click='change-color-shift' preferred-height='7'></button>
+      </horizontal>
+      <!--<slider-setting text='Posterize Alpha' value='Posterize' min='0' max='1' apply-on-change='true'/>
+      <slider-setting text='Posterize Power' value='PosterizePower' min='0' max='256' apply-on-change='true'/>-->
+      <horizontal pad-top='5'>
+        <slider-setting text='LUT Strength' value='LUTStrength' min='0' max='1' apply-on-change='true'/>
+      </horizontal>
+      <horizontal vertical-fit='PreferredSize' pad-bottom='5'>
+        <text text='LUT Texture' font-size='5'></text>
+        <button text='Change' click-event='TexModalShow' preferred-height='7'></button>
+      </horizontal>
+      <slider-setting text='Rain' value='Rain' min='0' max='0.1' apply-on-change='true'/>
+      <!-- {Prop} -->
+    </scrollable-settings-container>
+
+  <modal-color-picker id='colorpicker' color-change='color-change' on-done='color-done' on-cancel='color-cancel'></modal-color-picker>
+
+  <modal  id='TexModal' size-delta-x='70' size-delta-y='70' show-event='TexModalShow' click-off-closes='true'>
+    <vertical spacing='2' pad='4'>
+      <page-button event-click='TexList#PageUp' direction='Up' />
+      <list id='TexList' expand-cell='true' select-cell='tex-selected' list-style='Simple' />
+      <page-button event-click='TexList#PageDown' direction='Down' />
+    </vertical>
+  </modal>
+</div>
